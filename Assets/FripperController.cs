@@ -12,6 +12,7 @@ public class FripperController : MonoBehaviour
     //弾いた時の傾き
     private float flickAngle = -20;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,16 +48,20 @@ public class FripperController : MonoBehaviour
             SetAngle(this.defaultAngle);
         }
 
+       
+
+    }
         
 
-    }
-
-    //フリッパーの傾きを設定
-    public void SetAngle(float angle)
-    {
-        JointSpring jointSpr = this.myHingeJoint.spring;
-        jointSpr.targetPosition = angle;
-        this.myHingeJoint.spring = jointSpr;
-    }
+        //フリッパーの傾きを設定
+        public void SetAngle(float angle)
+        {
+            JointSpring jointSpr = this.myHingeJoint.spring;
+            jointSpr.targetPosition = angle;
+            this.myHingeJoint.spring = jointSpr;
+        }
+    
 }
+
+
 
